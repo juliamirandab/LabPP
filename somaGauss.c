@@ -9,7 +9,6 @@
 int main (void) {
     int n;
     
-    
     printf("Digite um numero inteiro maior que 1: ");
     scanf("%d", &n);
 

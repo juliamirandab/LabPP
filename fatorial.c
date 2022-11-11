@@ -7,20 +7,18 @@
 #include <stdio.h>
 
 int main (void) {
-    int n, i, fat;
+    int n;
     
     printf("Digite um numero inteiro maior que 1: ");
     scanf("%d", &n);
 
     if(n > 1){
-        i = 1;
-        fat = 1;
-
-        while(i <= n){
+        int i=1;
+        long long int fat=1;
+        for(i = 1; i <= n; i++){
             fat = fat * i;
-            i = i + 1;
         }
-        printf("%d! = %d \n", n, fat);
+        printf("%d! = %lld", n, fat);
     }
     else{
         printf("Seu numero nao e valido!");
