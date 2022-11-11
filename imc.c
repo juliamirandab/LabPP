@@ -8,7 +8,7 @@
 
 int main(void){
     float altura, imc;
-    int peso;
+    float peso;
 
     printf("Qual seu peso, em kg, e sua altura, em m? ");
     scanf("%f %f\n", &peso, &altura);
