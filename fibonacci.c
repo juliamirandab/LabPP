@@ -1,6 +1,6 @@
 /* 
  * Arquivo: fibonacci.c
- * Data de criação: 04/11/22
+ * Data de criação: 11/11/22
  * Autor: Júlia Miranda 
  */
 
