@@ -1,6 +1,6 @@
 /* 
  * Arquivo: divisores.c
- * Data de criação: 24/11/22
+ * Data de criação: 27/11/22
  * Autor: Júlia Miranda 
  */
 
