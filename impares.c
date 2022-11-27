@@ -1,6 +1,6 @@
 /* 
  * Arquivo: impares.c
- * Data de criação: 24/11/22
+ * Data de criação: 27/11/22
  * Autor: Júlia Miranda 
  */
 
@@ -14,11 +14,12 @@ int main(void){
     if (a < b){
 
         for(i = a; i <= b; i++){ 
-            if (i%2 != 0){
+            if (i % 2 != 0){
                 printf("%d ", i);
 
             }
         } 
     }
+
     return 0;
 }
