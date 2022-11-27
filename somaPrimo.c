@@ -11,17 +11,15 @@ int main(void){
     int soma = 0;
     printf("Digite a e b do intervalo [a,b], sendo a < b: ");
     scanf("%d %d", &a, &b);
+
     if (a < b){
         for(n = a; n <= b; n++){
-            for (int i = 2; i < n; i++) {
-                if(n % i != 0) {
-                    soma = soma + n;
-                }
+            for(int i = 2; i < n; i++){
+                soma = soma + n;
             }
-                
         }
     }
-    printf("%d ", soma);
+    printf("%d", soma);
     return 0;
 }
 
