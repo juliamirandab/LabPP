@@ -12,8 +12,10 @@ int main(void){
     printf("Digite um numero inteiro positivo: ");
     scanf("%d", &n0);
     int soma = n0;
-
-    while (n0 >= 1){
+    if (n0 == 1){
+        soma = 1;
+    }
+    while (n0 > 1){
         if(n0 %2 == 0){
             n0 = n0/2;
             soma = soma + n0;
@@ -22,6 +24,7 @@ int main(void){
             n0 = (n0*3) + 1;
             soma = soma + n0;
         }
+        
     }
 
     printf("%d", soma);
