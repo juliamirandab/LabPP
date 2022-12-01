@@ -1,5 +1,5 @@
 /* 
- * Arquivo: minMax.c
+ * Arquivo:remNegativos.c
  * Data de criação: 01/12/22
  * Autor: Júlia Miranda 
  */
