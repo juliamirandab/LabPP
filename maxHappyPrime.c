@@ -46,8 +46,8 @@ bool ehPrimo(int n){
 
 bool ehFeliz(int x){
     int digito;
-    int soma;
-    soma = 0;
+    int soma = 0;
+    
     while (x > 0){
         digito = (x%10);
         soma = soma + pow(digito,2);
