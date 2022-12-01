@@ -1,5 +1,5 @@
 /* 
- * Arquivo: quaisDiv.c
+ * Arquivo: somatorio.c
  * Data de criação: 01/12/22
  * Autor: Júlia Miranda 
  */
