@@ -12,22 +12,22 @@ long long int len(char * str);
 
 int main(void){
     char frase[N] = {'x','x','x','x','x'};
-    printf("Entre com uma msg: ");
+    printf("Entre com uma mensagem: ");
     getstr(frase, N);
+    lower(frase);
     char aux[N];
     int j, dif;
     for (int i = 0; i < len(frase); i++){
         if(frase[i] != '-' && frase[i] != ',' && frase[i] != ' ' && frase[i] != '*' && frase[i] != ':' && frase[i] != '"' && frase[i] != '.'){
-            aux[j++] = lower(frase[i]);
+            aux[j++] = frase[i];
         }
     }
     aux[j] = '\n';
-    int x = len(aux);
-    x--;
+    
     for(int i = 0; i < len(aux); i++){
-        if(aux[i] != aux[x])
+        if(aux[i] != aux[i])
             dif++;
-        x--;
+        
     }
     if(dif == 0){
         printf("Palindromo: Verdadeiro");
