@@ -4,59 +4,85 @@
  * Autor: Júlia Miranda 
  */
 #include <stdio.h>
-#define N 1024
+#include <string.h>
+#define N 400
 
-void getstr(char * str, long long int nchar);
-char lower(char * str);
-long long int len(char * str);
+int getstr(char * str, int nchar);
+void upper(char * str);
+void copiaInvertida(char * str, int nchar, int i);
 
 int main(void){
-    char frase[N] = {'x','x','x','x','x'};
+    char frase[N];
     printf("Entre com uma mensagem: ");
-    getstr(frase, N);
-    lower(frase);
-    char aux[N];
-    int j, dif;
-    for (int i = 0; i < len(frase); i++){
-        if(frase[i] != '-' && frase[i] != ',' && frase[i] != ' ' && frase[i] != '*' && frase[i] != ':' && frase[i] != '"' && frase[i] != '.'){
-            aux[j++] = frase[i];
-        }
-    }
-    aux[j] = '\n';
-    
-    for(int i = 0; i < len(aux); i++){
-        if(aux[i] != aux[i])
-            dif++;
-        
-    }
-    if(dif == 0){
-        printf("Palindromo: Verdadeiro");
-    }else{
-        printf("Palindromo: Falso");
-    }
-
+    int i = getstr(frase,N);
+    upper(frase);
+    copiaInvertida(frase, N, i);
     return 0;
 }
-
-void getstr(char * str, long long int nchar) {
+int getstr(char * str, int nchar){
     char c;
-    long long int i;
-    for(i = 0; i < nchar && (c = getchar()) != '\n'; i++)
-        str[i] = c;
-    str[(i >= nchar) ? nchar - 1 : i] = '\0';
-    if(i >= nchar) // precisa limpar o buffer do teclado
-        while ((c = getchar()) != '\n' && c != EOF);
+    int i;
+    int j = 0;
+    for(i = 0; i < nchar; i++){
+        c = getchar();
+        if(c != '\n'){
+            str[i] = c;
+            j++;
+        }else{
+            str[i] = '\0';
+            break;
+        }
+    }
+    if(i == nchar){
+        str[nchar - 1] = '\0';
+        while((c = getchar()) != '\n' && c != EOF);
+    }
+    return j;
 }
-char lower(char * str) {
+void upper(char * str){
     long long int l = 0;
-    while(str[l]) {
-        if(str[l] >= 'A' && str[l] <= 'Z')
-            str[l] -= 'A' - 'a';
-        l++;
+    while(str[l]){
+        if(str[l] >= 'a' && str[l] <= 'z')
+            str[l] -='a' - 'A';
+        l++;    
     }
 }
-long long int len(char * str) {
-    long long int l = 0;
-    while(str[l]) l++;
-    return l;
+void copiaInvertida(char * str, int nchar, int i){
+    int x, y;
+    int a = 1;
+    for(int k = 0; k < i; k++){
+        if((str[k] >= 'A') && (str[k] <= 'Z')){
+            a++;
+        }
+    }
+    char vet[600];
+    char vett[600];
+    for(int k = 0; k < 600; k++){
+        vet[k] = '\0';
+        vett[k] = '\0';
+    }
+    for(int k = 0, y = 0; k < i; k++, y++){
+        if((str[k] >= 'A') && (str[k] <= 'Z')){
+            vet[y] = str[k];
+            if(strlen(vet) == a){
+                break;
+            }
+        }else{
+            y--;
+        }
+    }
+    for(int j = strlen(vet) - 1, x = 0; j >= 0; j--,x++){
+        vett[x] = vet[j];
+    }
+    int b = 0;
+    for(int j = 0; j < a; j++){
+        if(vett[j] != vet[j]){
+            printf("Palindromo: Falso");
+            b = 1;
+            break;
+        }
+    }
+    if(b == 0){
+        printf("Palindromo: Verdadeiro");
+    }
 }
