@@ -1,6 +1,6 @@
 /* 
  * Arquivo: mdc.c
- * Data de criação: 05/01/2022
+ * Data de criação: 05/01/2023
  * Autor: Júlia Miranda 
  */
 #include <stdio.h>
