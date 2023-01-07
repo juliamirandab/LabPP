@@ -1,6 +1,6 @@
 /* 
  * Arquivo: altura.c
- * Data de criação: 05/01/2023
+ * Data de criação: 05/01/23
  * Autor: Júlia Miranda 
  */
 #include <stdio.h>
