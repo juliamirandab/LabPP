@@ -1,6 +1,6 @@
 /* 
  * Arquivo: fib.c
- * Data de criação: 05/01/22
+ * Data de criação: 05/01/2023
  * Autor: Júlia Miranda 
  */
 #include <stdio.h>
