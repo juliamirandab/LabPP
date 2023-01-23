@@ -1,6 +1,6 @@
 /* 
  * Arquivo: racionais.c
- * Data de criação: 22/01/23
+ * Data de criação: 22/01/2023
  * Autor: Júlia Miranda 
  */
 #include <stdio.h>
